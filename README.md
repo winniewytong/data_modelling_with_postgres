@@ -181,10 +181,10 @@ I extract all the song data from the JSON files using `get_files`.
 ## Running the Python Scripts 
 <br>
 To create the database and table structure, run the following command:
-<br>
+
 `!python create_tables.py`
-<br>
+
 To parse the log files, run the following command:
-<br>
+
 `!python etl.py`
 
