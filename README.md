@@ -5,7 +5,6 @@ The purpose of this data engineering project is to create a Postgress database w
 <br>
 ## Datasets ##
 <br>
-
 #### Song Dataset ####
 <br>
 The first dataset is a subset of real data from the Million Song Dataset.
@@ -30,7 +29,7 @@ The log files in the dataset I'll be working with are partitioned by year and mo
 
 ## Schema ##
 <br>
-I will create a **star schema** for this project with **1** Fact table and **4** Dimension Tables
+I will create a **star schema* for this project with **1** Fact table and **4** Dimension Tables
 <br>
 ## Fact Table ##
 <br>
