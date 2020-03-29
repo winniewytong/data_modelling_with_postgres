@@ -186,4 +186,5 @@ To create the database and table structure, run the following command:
 <br>
 To parse the log files, run the following command:
 <br>
-`!python etl.py`# data_modelling_with_postgres
+`!python etl.py`
+
