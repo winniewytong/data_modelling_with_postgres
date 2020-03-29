@@ -107,6 +107,7 @@ I extract all the song data from the JSON files using `get_files`.
 
 #### time and users tables 
 <br>
+
 1. `time data`
 
 - Select the data in the `ts` column, use `to_datetime` to turn the timestamp data from miliseconds to datetime.
@@ -120,17 +121,15 @@ I extract all the song data from the JSON files using `get_files`.
 - Select the columns that I need from the JSON files and turn these columns info a dataframe. 
 <br>
 - Then I insert all the users' data row by row into the `users` table that I previously greated.
-<br>
+
 ### Fact Table
-<br>
+
 `song play table`
-<br>
+
 1. To create a fact table we need to join the `songs` and `artists` tables to get the song_id and artist_id in once place. 
-<br>
 2. Get all the other relevant data from the log data file 
-<br>
 3. Insert the data row by row into the `song play table` I previously created
-<br>
+
 
 ## File Structure 
 
