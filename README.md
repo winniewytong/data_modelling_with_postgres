@@ -30,9 +30,9 @@ The log files in the dataset I'll be working with are partitioned by year and mo
 
 ## Schema 
 I will create a __star schema__ for this project with __1__ Fact table and __4__ Dimension Tables
-<br>
+
 ### Fact Table 
-<br>
+
 #### songplays table 
 <br>
 - Records in log data associated with song plays i.e. records with page NextSong
@@ -181,10 +181,8 @@ I extract all the song data from the JSON files using `get_files`.
 ## Running the Python Scripts 
 <br>
 To create the database and table structure, run the following command:
-
 `!python create_tables.py`
 
 To parse the log files, run the following command:
-
 `!python etl.py`
 
