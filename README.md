@@ -126,7 +126,6 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 ## ETL Processes 
 In order to create tables, first of all I connect to the Sparkify database, then use the `CREATE` SQL statement to create  the 5 tables above.
 <br>
-
 ### Dimension Table 
 <br>
 #### songs and artists tables 
@@ -162,7 +161,7 @@ I extract all the song data from the JSON files using `get_files`.
 - Then I insert all the users' data row by row into the `users` table that I previously greated.
 <br>
 
-## Fact Table
+### Fact Table
 <br>
 `song play table`
 <br>
@@ -172,6 +171,7 @@ I extract all the song data from the JSON files using `get_files`.
 <br>
 3. Insert the data row by row into the `song play table` I previously created
 <br>
+
 ## File Structure 
 
 `create_tables.py` - Drops and create tables in database
