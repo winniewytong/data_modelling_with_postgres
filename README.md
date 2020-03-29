@@ -4,9 +4,8 @@ A startup called Sparkify wants to analyze the data they've been collecting on s
 
 The purpose of this data engineering project is to create a Postgress database with tables designed to optimise capabilities in song play analytics. My task is to create a database schema and ETL pipeline for this analysis. 
 <br>
-## Datasets 
-<br>
 
+## Datasets 
 ### Song Dataset 
 <br>
 The first dataset is a subset of real data from the Million Song Dataset.
@@ -30,7 +29,6 @@ The log files in the dataset I'll be working with are partitioned by year and mo
 `log_data/2018/11/2018-11-13-events.json`
 
 ## Schema 
-<br>
 I will create a __star schema__ for this project with __1__ Fact table and __4__ Dimension Tables
 <br>
 ### Fact Table 
@@ -60,9 +58,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 <br>
 ### Dimesion Tables
 <br>
-
 #### users 
-<br>
 - Users in the app
 <br>
 1. user_id INT PRIMARY KEY
@@ -75,9 +71,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 <br>
 5. level VARCHAR
 <br>
-
 #### songs 
-<br>
 - Songs in music database
 <br>
 1. song_id VARCHAR PRIMARY KEY 
@@ -90,9 +84,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 <br>
 5. duration NUMBERIC 
 <br>
-
 #### artists 
-<br>
 - Artists in music database
 <br>
 1. artist_id VARCHAR PRIMARY KEY 
@@ -106,7 +98,6 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 5. longitude FLOAT
 <br>
 #### time 
-<br>
 - Timestamps of records in songplays broken down into specific units
 <br>
 1. start_time TIMESTAMP PRIMARY KEY
@@ -128,7 +119,6 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 In order to create tables, first of all I connect to the Sparkify database, then use the `CREATE` SQL statement to create  the 5 tables above.
 <br>
 ### Dimension Table 
-<br>
 #### songs and artists tables 
 <br>
 I extract all the song data from the JSON files using `get_files`. 
@@ -161,7 +151,6 @@ I extract all the song data from the JSON files using `get_files`.
 - Then I insert all the users' data row by row into the `users` table that I previously greated.
 <br>
 ### Fact Table
-<br>
 `song play table`
 <br>
 1. To create a fact table we need to join the `songs` and `artists` tables to get the song_id and artist_id in once place. 
