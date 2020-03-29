@@ -55,9 +55,9 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 <br>
 9. user_agent VARCHAR
 <br>
-<br>
+
 ### Dimesion Tables
-<br>
+
 #### users 
 <br>
 - Users in the app
@@ -181,8 +181,10 @@ I extract all the song data from the JSON files using `get_files`.
 ## Running the Python Scripts 
 <br>
 To create the database and table structure, run the following command:
+
 `!python create_tables.py`
 
 To parse the log files, run the following command:
+
 `!python etl.py`
 
