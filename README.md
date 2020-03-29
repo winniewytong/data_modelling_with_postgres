@@ -36,23 +36,15 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 #### songplays table 
 - Records in log data associated with song plays i.e. records with page NextSong
 1. songplay_id INT PRIMARY KEY
-<br>
 2. start_time TIMESTAMP
-<br>
 3. user_id INT
-<br>
 4. level VARCHAR
-<br>
 5. song_id VARCHAR
-<br>
 6. artist_id VARCHAR
-<br>
 7. sessio INT
-<br>
 8. location VARCHAR
-<br>
 9. user_agent VARCHAR
-<br>
+
 
 ### Dimesion Tables
 
@@ -60,61 +52,37 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 
 - Users in the app
 1. user_id INT PRIMARY KEY
-<br>
 2. first_name VARCHAR
-<br>
 3. last_name VARCHAR
-<br>
 4. gender VARCHAR
-<br>
 5. level VARCHAR
-<br>
+
 #### songs
-<br>
 - Songs in music database
-<br>
 1. song_id VARCHAR PRIMARY KEY 
-<br>
 2. title VARCHAR
-<br>
 3. artist_id VARCHAR
-<br>
 4. year INT
-<br>
 5. duration NUMBERIC 
-<br>
+
 #### artists 
-<br>
 - Artists in music database
-<br>
 1. artist_id VARCHAR PRIMARY KEY 
-<br>
 2. name VARCHAR
-<br>
 3. location VARCHAR
-<br>
 4. latitude FLOAT
-<br>
 5. longitude FLOAT
-<br>
+
 #### time 
-<br>
 - Timestamps of records in songplays broken down into specific units
-<br>
 1. start_time TIMESTAMP PRIMARY KEY
-<br>
 2. hour INT
-<br>
 3. day INT
-<br>
 4. week INT
-<br>
 5. month INT
-<br>
 6. year INT
-<br>
 7. weekday INT
-<br>
+
 
 ## ETL Processes 
 In order to create tables, first of all I connect to the Sparkify database, then use the `CREATE` SQL statement to create  the 5 tables above.
@@ -136,6 +104,7 @@ I extract all the song data from the JSON files using `get_files`.
 <br>
 - Then I insert all the artists' data row by row into the `artists` table that I previously greated.
 <br>
+
 #### time and users tables 
 <br>
 1. `time data`
