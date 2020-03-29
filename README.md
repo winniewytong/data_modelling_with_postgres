@@ -59,7 +59,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 ### Dimesion Tables
 
 #### users 
-<br>
+
 - Users in the app
 <br>
 1. user_id INT PRIMARY KEY
