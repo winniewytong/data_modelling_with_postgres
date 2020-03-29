@@ -5,7 +5,7 @@ The purpose of this data engineering project is to create a Postgress database w
 <br>
 ## Datasets ##
 <br>
-### Song Dataset ###
+#### Song Dataset ####
 The first dataset is a subset of real data from the Million Song Dataset.
 <br>
 Each file is in JSON format and contains metadata about a song and the artist of that song. 
@@ -30,9 +30,9 @@ The log files in the dataset I'll be working with are partitioned by year and mo
 <br>
 I will create a **star schema** for this project with **1** Fact table and **4** Dimension Tables
 <br>
-## Fact Table ##
+#### Fact Table ####
 <br>
-## songplays table ##
+#### songplays table ####
 <br>
 - Records in log data associated with song plays i.e. records with page NextSong
 <br>
@@ -56,7 +56,7 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 <br>
 ## Dimesion Tables###
 <br>
-### users ##
+#### users ####
 <br>
 - Users in the app
 <br>
@@ -72,7 +72,7 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 <br>
 
 
-##### songs #####
+#### songs ####
 <br>
 - Songs in music database
 <br>
@@ -87,7 +87,7 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 5. duration NUMBERIC 
 <br>
 
-##### artists #####
+#### artists ####
 <br>
 - Artists in music database
 <br>
@@ -101,7 +101,7 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 <br>
 5. longitude FLOAT
 <br>
-##### time #####
+#### time ####
 <br>
 - Timestamps of records in songplays broken down into specific units
 <br>
@@ -119,13 +119,13 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 <br>
 7. weekday INT
 <br>
-### ETL Processes###
+#### ETL Processes ####
 In order to create tables, first of all I connect to the Sparkify database, then use the `CREATE` SQL statement to create  the 5 tables above.
 <br>
 
-#### Dimension Table ####
+### Dimension Table ###
 <br>
-##### songs and artists tables #####
+#### songs and artists tables ####
 <br>
 I extract all the song data from the JSON files using `get_files`. 
 
@@ -141,9 +141,7 @@ I extract all the song data from the JSON files using `get_files`.
 <br>
 - Then I insert all the artists' data row by row into the `artists` table that I previously greated.
 <br>
-
-##### time and users tables #####
-
+#### time and users tables ####
 1. `time data`
 
 - Select the data in the `ts` column, use `to_datetime` to turn the timestamp data from miliseconds to datetime.
@@ -170,7 +168,7 @@ I extract all the song data from the JSON files using `get_files`.
 <br>
 3. Insert the data row by row into the `song play table` I previously created
 <br>
-### File Structure###
+## File Structure ##
 
 `create_tables.py` - Drops and create tables in database
 
