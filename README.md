@@ -95,31 +95,24 @@ I extract all the song data from the JSON files using `get_files`.
 1. `songs_data`
 
 - Select the columns that I need from the JSON files and turn these columns info a dataframe. 
-<br>
 - Then I insert all the song data row by row into the `song` table that I previously greated.
 
 2. `artists_data`
 
 - Select the columns that I need from the JSON files and turn these columns info a dataframe. 
-<br>
 - Then I insert all the artists' data row by row into the `artists` table that I previously greated.
-<br>
 
 #### time and users tables 
-<br>
 
 1. `time data`
 
 - Select the data in the `ts` column, use `to_datetime` to turn the timestamp data from miliseconds to datetime.
-<br>
 - Use `datetime` functions to break the timestamp in to *hour,day, week, month, year, weekday*
-<br>
 - Then I insert all the time data row by row into the `time` table that I previously greated.
 
 2. `users data`
 
 - Select the columns that I need from the JSON files and turn these columns info a dataframe. 
-<br>
 - Then I insert all the users' data row by row into the `users` table that I previously greated.
 
 ### Fact Table
