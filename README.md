@@ -5,7 +5,9 @@ The purpose of this data engineering project is to create a Postgress database w
 <br>
 ## Datasets ##
 <br>
-### Song Dataset ###
+
+#### Song Dataset ####
+<br>
 The first dataset is a subset of real data from the Million Song Dataset.
 <br>
 Each file is in JSON format and contains metadata about a song and the artist of that song. 
