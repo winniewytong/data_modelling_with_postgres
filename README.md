@@ -59,6 +59,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 ### Dimesion Tables
 <br>
 #### users 
+<br>
 - Users in the app
 <br>
 1. user_id INT PRIMARY KEY
@@ -71,7 +72,8 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 <br>
 5. level VARCHAR
 <br>
-#### songs 
+#### songs
+<br>
 - Songs in music database
 <br>
 1. song_id VARCHAR PRIMARY KEY 
@@ -85,6 +87,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 5. duration NUMBERIC 
 <br>
 #### artists 
+<br>
 - Artists in music database
 <br>
 1. artist_id VARCHAR PRIMARY KEY 
@@ -98,6 +101,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 5. longitude FLOAT
 <br>
 #### time 
+<br>
 - Timestamps of records in songplays broken down into specific units
 <br>
 1. start_time TIMESTAMP PRIMARY KEY
@@ -136,6 +140,7 @@ I extract all the song data from the JSON files using `get_files`.
 - Then I insert all the artists' data row by row into the `artists` table that I previously greated.
 <br>
 #### time and users tables 
+<br>
 1. `time data`
 
 - Select the data in the `ts` column, use `to_datetime` to turn the timestamp data from miliseconds to datetime.
@@ -151,6 +156,7 @@ I extract all the song data from the JSON files using `get_files`.
 - Then I insert all the users' data row by row into the `users` table that I previously greated.
 <br>
 ### Fact Table
+<br>
 `song play table`
 <br>
 1. To create a fact table we need to join the `songs` and `artists` tables to get the song_id and artist_id in once place. 
