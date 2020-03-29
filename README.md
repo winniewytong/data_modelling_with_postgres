@@ -31,7 +31,7 @@ The log files in the dataset I'll be working with are partitioned by year and mo
 
 ## Schema 
 <br>
-I will create a **star schema** for this project with **1** Fact table and **4** Dimension Tables
+I will create a __star schema__ for this project with __1__ Fact table and __4__ Dimension Tables
 <br>
 ### Fact Table 
 <br>
@@ -123,6 +123,7 @@ I will create a **star schema** for this project with **1** Fact table and **4**
 <br>
 7. weekday INT
 <br>
+
 ## ETL Processes 
 In order to create tables, first of all I connect to the Sparkify database, then use the `CREATE` SQL statement to create  the 5 tables above.
 <br>
@@ -153,14 +154,12 @@ I extract all the song data from the JSON files using `get_files`.
 <br>
 - Then I insert all the time data row by row into the `time` table that I previously greated.
 
-
 2. `users data`
 
 - Select the columns that I need from the JSON files and turn these columns info a dataframe. 
 <br>
 - Then I insert all the users' data row by row into the `users` table that I previously greated.
 <br>
-
 ### Fact Table
 <br>
 `song play table`
