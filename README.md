@@ -34,9 +34,7 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 ### Fact Table 
 
 #### songplays table 
-<br>
 - Records in log data associated with song plays i.e. records with page NextSong
-<br>
 1. songplay_id INT PRIMARY KEY
 <br>
 2. start_time TIMESTAMP
@@ -61,7 +59,6 @@ I will create a __star schema__ for this project with __1__ Fact table and __4__
 #### users 
 
 - Users in the app
-<br>
 1. user_id INT PRIMARY KEY
 <br>
 2. first_name VARCHAR
